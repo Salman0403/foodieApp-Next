@@ -1,21 +1,8 @@
 import ImagePicker from "@/components/meals/image-picker";
 import styles from "./styles.module.css";
+import { shareMeal } from "@/lib/serverActions";
 
 const MealsSharePage = () => {
-  const shareMeal = async (formData) => {
-    "use server";
-
-    const meal = {
-      title: formData.get("title"),
-      creator: formData.get("name"),
-      creator_email: formData.get("email"),
-      summary: formData.get("summary"),
-      instruction: formData.get("instruction"),
-      image: formData.get("image"),
-    };
-
-    console.log("Single Meal ========>", meal)
-  };
   return (
     <>
       <header className={styles.header}>
